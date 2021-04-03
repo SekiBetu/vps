@@ -34,8 +34,6 @@ deb-src https://deb.nodesource.com/node_14.x buster main
 ###PHP
 deb https://packages.sury.org/php/ buster main
 
-###Wine
-deb [arch=i386] https://dl.winehq.org/wine-builds/debian/ buster main
-
 ###yarn
 deb https://dl.yarnpkg.com/debian/ stable main
+

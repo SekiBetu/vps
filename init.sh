@@ -22,7 +22,11 @@ sudo apt install -y libunwind8 gettext # 安装libunwind8 gettext
 echo "=============================================================="
 echo "安装Java"
 echo "=============================================================="
-sudo apt install -y default-jre # 安装Java
+wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.10_9.tar.gz
+sudo tar -C /usr/local -xzf OpenJDK11U-jre_x64_linux_hotspot_11.0.10_9.tar.gz # 安装Java
+echo 'export PATH=$PATH:/usr/local/jdk-11.0.10+9-jre/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
+export PATH=$PATH:/usr/local/jdk-11.0.10+9-jre/bin
+source ~/.bashrc
 echo "=============================================================="
 echo "安装unzip"
 echo "=============================================================="
@@ -34,7 +38,7 @@ sudo apt install -y screen # 安装screen
 echo "=============================================================="
 echo "卸载目前的php"
 echo "=============================================================="
-sudo apt-get autoremove php*
+sudo apt autoremove -y php*
 sudo find /etc -name "*php*" |xargs  rm -rf 
 sudo apt purge `dpkg -l | grep php| awk '{print $2}' |tr "\n" " "`
 echo "=============================================================="
@@ -86,10 +90,31 @@ echo "=============================================================="
 # 编译安装python3相关下载工具
 echo "编译安装python3相关下载工具"
 echo "=============================================================="
-bash <(curl -sL https://python3.netlify.app/install.sh) -v 3.7.10 # 安装python3.7.10
+# bash <(curl -sL https://python3.netlify.app/install.sh) -v 3.8.9 # 安装python3.8.9
+sudo apt remove -y openssl ; sudo apt autoremove -y
+wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz ; tar -zxvf openssl-1.1.1k.tar.gz
+cd openssl-1.1.1k ; ./config --prefix=/home/sekibetu/openssl --openssldir=/home/sekibetu/openssl no-ssl2 ; make -j 4
+sudo make install ; cd ..
+echo 'export PATH=$PATH:/home/sekibetu/openssl/bin'>>~/.bashrc
+export PATH=$PATH:/home/sekibetu/openssl/bin
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sekibetu/openssl/lib'>>~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sekibetu/openssl/lib
+echo 'export LC_ALL="en_US.UTF-8"'>>~/.bashrc
+export LC_ALL="en_US.UTF-8"
+echo 'export LDFLAGS="-L/home/sekibetu/openssl/lib -Wl,-rpath,/home/sekibetu/openssl/lib"'>>~/.bashrc
+export LDFLAGS="-L/home/sekibetu/openssl/lib -Wl,-rpath,/home/sekibetu/openssl/lib"
+source ~/.bashrc
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev install ca-certificates
+sudo apt autoremove -y ; sudo apt update -y ; sudo apt upgrade -y
+curl -O https://www.python.org/ftp/python/3.8.9/Python-3.8.9.tar.xz
+sudo tar -xvf Python-3.8.9.tar.xz ; cd Python-3.8.9 
+./configure --enable-optimizations --enable-loadable-sqlite-extensions --with-openssl=/home/sekibetu/openssl ; make -j 4
+sudo make install ; python3 --version
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py ; python3 get-pip.py ; pip3 --version
 pip3 install streamlink ; pip3 install youtube-dl ; pip3 install you-get # 安装基于python3的下载工具
 echo 'export PATH=$PATH:/usr/local/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
 export PATH=$PATH:/usr/local/bin
+source ~/.bashrc
 echo "=============================================================="
 
 # 安装go相关下载工具
