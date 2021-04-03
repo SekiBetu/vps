@@ -90,27 +90,7 @@ echo "=============================================================="
 # 编译安装python3相关下载工具
 echo "编译安装python3相关下载工具"
 echo "=============================================================="
-# bash <(curl -sL https://python3.netlify.app/install.sh) -v 3.8.9 # 安装python3.8.9
-sudo apt remove -y openssl ; sudo apt autoremove -y
-wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz ; tar -zxvf openssl-1.1.1k.tar.gz
-cd openssl-1.1.1k ; ./config --prefix=/home/sekibetu/openssl --openssldir=/home/sekibetu/openssl no-ssl2 ; make -j 4
-sudo make install ; cd ..
-echo 'export PATH=$PATH:/home/sekibetu/openssl/bin'>>~/.bashrc
-export PATH=$PATH:/home/sekibetu/openssl/bin
-echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sekibetu/openssl/lib'>>~/.bashrc
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sekibetu/openssl/lib
-echo 'export LC_ALL="en_US.UTF-8"'>>~/.bashrc
-export LC_ALL="en_US.UTF-8"
-echo 'export LDFLAGS="-L/home/sekibetu/openssl/lib -Wl,-rpath,/home/sekibetu/openssl/lib"'>>~/.bashrc
-export LDFLAGS="-L/home/sekibetu/openssl/lib -Wl,-rpath,/home/sekibetu/openssl/lib"
-source ~/.bashrc
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev install ca-certificates
-sudo apt autoremove -y ; sudo apt update -y ; sudo apt upgrade -y
-curl -O https://www.python.org/ftp/python/3.8.9/Python-3.8.9.tar.xz
-sudo tar -xvf Python-3.8.9.tar.xz ; cd Python-3.8.9 
-./configure --enable-optimizations --enable-loadable-sqlite-extensions --with-openssl=/home/sekibetu/openssl ; make -j 4
-sudo make install ; python3 --version
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py ; python3 get-pip.py ; pip3 --version
+bash <(curl -sL https://raw.githubusercontent.com/SekiBetu/python3-install/master/install.sh) -v 3.8.9 # 安装python3.8.9
 pip3 install streamlink ; pip3 install youtube-dl ; pip3 install you-get # 安装基于python3的下载工具
 echo 'export PATH=$PATH:/usr/local/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
 export PATH=$PATH:/usr/local/bin
@@ -127,7 +107,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin'>>~/.bashrc # 修改默认环境变量
 export PATH=$PATH:/usr/local/go/bin
 sudo apt -y install build-essential
 echo "此处可能需要较长时间，请耐心等待"
-git clone https://github.com/nnn-revo2012/livedl.git ; cd livedl/src ; go build -o livedl livedl.go ; rm -r `ls | grep -v "^livedl$"` ; cd .. #编译安装livedl
+git clone -b module https://github.com/nnn-revo2012/livedl.git ; cd livedl/src ; go build -o livedl livedl.go ; rm -r `ls | grep -v "^livedl$"` ; cd ../../ #编译安装livedl
 echo "=============================================================="
 
 # 安装B站录制相关工具
