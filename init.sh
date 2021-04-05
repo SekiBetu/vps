@@ -22,11 +22,10 @@ sudo apt install -y libunwind8 gettext # 安装libunwind8 gettext
 echo "=============================================================="
 echo "安装Java"
 echo "=============================================================="
-wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.10%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.10_9.tar.gz
-sudo tar -C /usr/local -xzf OpenJDK11U-jre_x64_linux_hotspot_11.0.10_9.tar.gz # 安装Java
-echo 'export PATH=$PATH:/usr/local/jdk-11.0.10+9-jre/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
-export PATH=$PATH:/usr/local/jdk-11.0.10+9-jre/bin
-source ~/.bashrc
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add - # 安装Java
+echo "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb buster main" | sudo tee /etc/apt/sources.list.d/adoptopenjdk.list
+sudo apt update
+sudo apt install -y adoptopenjdk-11-openj9-jre
 echo "=============================================================="
 echo "安装unzip"
 echo "=============================================================="

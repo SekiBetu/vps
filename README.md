@@ -171,6 +171,37 @@ curl https://raw.githubusercontent.com/SekiBetu/Linux/main/update_xray.sh | bash
 
 ## 杂项
 
+### JDK
+
+### OracleJDK
+https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+https://gist.github.com/wavezhang/ba8425f24a968ec9b2a8619d7c2d86a6#gistcomment-3425441
+```shell
+wget https://javadl.oracle.com/webapps/download/GetFile/1.8.0_281-b09/89d678f2be164786b292527658ca1605/linux-i586/jre-8u281-linux-x64.tar.gz
+sudo tar -C /usr/local -zxvf jre-8u281-linux-x64.tar.gz
+echo 'export PATH=$PATH:/usr/local/jre1.8.0_281/bin'>>~/.bashrc
+export PATH=$PATH:/usr/local/jre1.8.0_281/bin
+source ~/.bashrc
+```
+
+### AdoptOpenJDK
+https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=openj9#x64_linux-jre
+```shell
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+echo "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb buster main" | sudo tee /etc/apt/sources.list.d/adoptopenjdk.list
+sudo apt update
+sudo apt install -y adoptopenjdk-11-openj9-jre
+```
+
+### Liberica OpenJDK
+https://bell-sw.com/pages/repositories/
+```shell
+wget -q -O - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
+echo "deb [arch=amd64] https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list.d/bellsoft.list
+sudo apt update
+sudo apt install bellsoft-java11-runtime-full
+```
+
 #### Go语言支持的TLS密码套件清单：
 
 https://github.com/golang/go/blob/master/src/crypto/tls/cipher_suites.go#L474
