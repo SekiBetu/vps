@@ -171,8 +171,6 @@ curl https://raw.githubusercontent.com/SekiBetu/Linux/main/update_xray.sh | bash
 
 ## 杂项
 
-### JDK
-
 ### OracleJDK
 https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
 https://gist.github.com/wavezhang/ba8425f24a968ec9b2a8619d7c2d86a6#gistcomment-3425441
