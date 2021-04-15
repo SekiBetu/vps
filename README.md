@@ -154,10 +154,6 @@ curl https://raw.githubusercontent.com/SekiBetu/Linux/main/restart.sh | bash
 ```
 
 ```shell
-curl https://raw.githubusercontent.com/SekiBetu/Linux/main/build_v2ray.sh | bash
-```
-
-```shell
 curl https://raw.githubusercontent.com/SekiBetu/Linux/main/xray.sh | bash
 ```
 
@@ -178,10 +174,10 @@ https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
 https://gist.github.com/wavezhang/ba8425f24a968ec9b2a8619d7c2d86a6#gistcomment-3425441
 
 ```shell
-wget https://javadl.oracle.com/webapps/download/GetFile/1.8.0_281-b09/89d678f2be164786b292527658ca1605/linux-i586/jre-8u281-linux-x64.tar.gz
-sudo tar -C /usr/local -zxvf jre-8u281-linux-x64.tar.gz
-echo 'export PATH=$PATH:/usr/local/jre1.8.0_281/bin'>>~/.bashrc
-export PATH=$PATH:/usr/local/jre1.8.0_281/bin
+wget https://javadl.oracle.com/webapps/download/GetFile/1.8.0_291-b10/d7fc238d0cbf4b0dac67be84580cfb4b/linux-i586/jre-8u291-linux-x64.tar.gz
+sudo tar -C /usr/local -zxvf jre-8u291-linux-x64.tar.gz
+echo 'export PATH=$PATH:/usr/local/jre1.8.0_291/bin'>>~/.bashrc
+export PATH=$PATH:/usr/local/jre1.8.0_291/bin
 source ~/.bashrc
 ```
 
@@ -209,7 +205,23 @@ sudo apt install bellsoft-java11-runtime-full
 #### mirai
 
 ```shell
-mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
+mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl mkdir plugins ; cd plugins ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.3/bilibili-dynamic-mirai-plugin-1.0.3.mirai.jar ; cd .. ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
+```
+
+#### Twitch Drop
+
+```shell
+sudo apt install -y git nodejs chromium
+sudo npm install -g npm
+git clone https://github.com/SekiBetu/TwitchDropGrabber.git
+cd TwitchDropGrabber ; sudo npm install ; sudo npm run build
+echo "rainbow6" > game.txt ; mv .env.example .env
+npm start -- -f "game.txt" -g "Tom Clancy's Rainbow Six Siege"
+
+wget https://raw.githubusercontent.com/SekiBetu/Linux/main/twitch.sh
+
+crontab -e
+0 * * * * /bin/bash /home/user/twitch.sh
 ```
 
 #### Go语言支持的TLS密码套件清单：

@@ -59,8 +59,7 @@ sudo apt install -y git # 安装git
 echo "=============================================================="
 echo "#安装nodejs LTS"
 echo "=============================================================="
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash - # 安装nodejs LTS
-sudo apt install -y nodejs
+sudo apt install -y nodejs # 安装nodejs
 echo "=============================================================="
 echo "将主机设置为Asia/Shanghai时区并通过systemd-timesyncd自动同步时间"
 echo "=============================================================="
