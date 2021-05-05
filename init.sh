@@ -142,7 +142,7 @@ echo "=============================================================="
 # 安装ASF
 echo "安装ASF"
 echo "=============================================================="
-wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.0.5.6/ASF-linux-x64.zip
+wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.0.6.6/ASF-win-x64.zip
 unzip ASF-linux-x64.zip -d ASF/
 rm ASF-linux-x64.zip
 cd ASF/
