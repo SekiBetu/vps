@@ -203,11 +203,11 @@ sudo apt update
 sudo apt install bellsoft-java11-runtime-full
 ```
 
-#### 7zip
+#### 7-Zip
 
 ```shell
 mkdir 7zip ; cd 7zip/ ; wget https://7-zip.org/a/7z2102-linux-x64.tar.xz
-xz -d 7z2101-linux-x64.tar.xz ; tar -xvf 7z2101-linux-x64.tar
+xz -d 7z2102-linux-x64.tar.xz ; tar -xvf 7z2102-linux-x64.tar
 sudo mv 7zz /usr/bin/
 cd .. ; sudo rm -rf 7zip/
 ```
