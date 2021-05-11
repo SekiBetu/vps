@@ -16,6 +16,7 @@ cd Xray-core/ || exit 2
 sudo rm go.mod go.sum
 go mod init github.com/xtls/xray-core
 go mod tidy
+go get github.com/ghodss/yaml@master
 
 echo "编译 xray-linux-64 中"
 env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -ldflags "-s -w" -o xray ./main
