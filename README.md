@@ -236,7 +236,7 @@ crontab -e
 
 #### Go语言支持的TLS密码套件清单：
 
-https://github.com/golang/go/blob/master/src/crypto/tls/cipher_suites.go#L474
+https://github.com/golang/go/blob/master/src/crypto/tls/cipher_suites.go
 
 #### debian源
 
