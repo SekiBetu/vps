@@ -215,7 +215,7 @@ cd .. ; sudo rm -rf 7zip/
 #### mirai
 
 ```shell
-mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl mkdir plugins ; cd plugins ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.3/bilibili-dynamic-mirai-plugin-1.0.3.mirai.jar ; cd .. ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
+mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl mkdir plugins ; cd plugins ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.5/bilibili-dynamic-mirai-plugin-1.0.5.mirai.jar ; cd .. ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
 ```
 
 #### Twitch Drop
