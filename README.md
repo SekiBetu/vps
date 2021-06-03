@@ -126,15 +126,9 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-
 
 一键脚本外的一些改动
 ```json
-"fallbacks": [
-    {"alpn":"http/1.1","dest":31300},
-    {"alpn":"h2","dest":31301}
-    ]
+"fallbacks": [{"alpn":"h2","dest":31301},{"alpn":"http/1.1","dest":31300}]
 
-"alpn": [
-    "http/1.1",
-    "h2"
-    ],
+"alpn":["h2","http/1.1"]
 ```
 
 #### 中转转发工具：
