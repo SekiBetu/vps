@@ -99,8 +99,8 @@ echo "=============================================================="
 echo "安装go相关下载工具"
 echo "=============================================================="
 sudo rm -rf $(go env GOROOT) # 如果有已经安装的go环境，先卸载，新老版本会有冲突，如不希望可以注释掉
-wget https://dl.google.com/go/go1.16.4.linux-amd64.tar.gz # 安装go环境，如不希望可以注释掉
-sudo tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz ; sudo rm go1.16.4.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz # 安装go环境，如不希望可以注释掉
+sudo tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz ; sudo rm go1.16.5.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
 export PATH=$PATH:/usr/local/go/bin
 sudo apt -y install build-essential
@@ -142,7 +142,7 @@ echo "=============================================================="
 # 安装ASF
 echo "安装ASF"
 echo "=============================================================="
-wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.0.6.6/ASF-win-x64.zip
+wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.1.0.9/ASF-linux-x64.zip
 unzip ASF-linux-x64.zip -d ASF/
 rm ASF-linux-x64.zip
 cd ASF/
