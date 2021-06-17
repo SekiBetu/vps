@@ -261,6 +261,7 @@ wget https://github.com/kmvan/x-prober/raw/master/dist/prober.php
 
 nginx配置改动
 ```Nginx
+listen 31301 http2;
 location ~ \.php$ {
     fastcgi_pass unix:/var/run/php/php8.0-fpm.sock;
     fastcgi_index prober.php;
