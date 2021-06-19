@@ -89,7 +89,7 @@ echo "=============================================================="
 echo "编译安装python3相关下载工具"
 echo "=============================================================="
 source <(curl -sL https://python3.netlify.app/install.sh) -v 3.8.10 --enable-optimizations --enable-loadable-sqlite-extensions # 安装python3.8.10
-pip3 install streamlink ; pip3 install youtube-dl ; pip3 install you-get # 安装基于python3的下载工具
+pip3 install --upgrade git+https://github.com/streamlink/streamlink.git ; pip3 install --upgrade git+https://github.com/ytdl-org/youtube-dl.git ; pip3 install --upgrade git+https://github.com/soimort/you-get.git # 安装基于python3的下载工具
 echo 'export PATH=$PATH:/usr/local/bin'>>~/.bashrc # 修改默认环境变量，如不希望可以注释掉
 export PATH=$PATH:/usr/local/bin
 source ~/.bashrc
