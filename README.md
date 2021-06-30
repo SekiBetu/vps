@@ -1,4 +1,3 @@
-
 ## Useful Path
 
 ```
@@ -22,7 +21,6 @@
 ```
 
 ## Useful Commands
-
 
 ```shell
 apt install -y sudo
@@ -63,7 +61,7 @@ cat /dev/null > nohup.out
 ```
 
 ```shell
-ps aux|grep 
+ps aux|grep
 ```
 
 ## Shell Scripts
@@ -74,7 +72,7 @@ ps aux|grep
 bash <(curl -Lso- https://git.io/superspeed)
 ```
 
-#### 一键DD脚本(默认密码cxthhhhh.com)：
+#### 一键 DD 脚本(默认密码 cxthhhhh.com)：
 
 https://www.cxthhhhh.com/Network-Reinstall-System-Modify
 
@@ -82,7 +80,7 @@ https://www.cxthhhhh.com/Network-Reinstall-System-Modify
 wget --no-check-certificate -qO ~/Network-Reinstall-System-Modify.sh 'https://www.cxthhhhh.com/CXT-Library/Network-Reinstall-System-Modify/Network-Reinstall-System-Modify.sh' && chmod a+x ~/Network-Reinstall-System-Modify.sh && bash ~/Network-Reinstall-System-Modify.sh -UI_Options
 ```
 
-#### 安装xanmod内核相关指令
+#### 安装 xanmod 内核相关指令
 
 https://xanmod.org/
 
@@ -112,19 +110,20 @@ dpkg --list | egrep -i --color 'linux-image|linux-headers'
 sudo dpkg --purge --force-remove-essential linux-image-
 ```
 
-#### BBR加速脚本(内含上述一键DD脚本)：
+#### BBR 加速脚本(内含上述一键 DD 脚本)：
 
 ```shell
 wget -N --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh
 ```
 
-#### 代理脚本(内含上述BBR加速脚本)：
+#### 代理脚本(内含上述 BBR 加速脚本)：
 
 ```shell
 wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 ```
 
 一键脚本外的一些改动
+
 ```json
 "fallbacks": [{"alpn":"h2","dest":31301},{"alpn":"http/1.1","dest":31300}]
 
@@ -209,7 +208,7 @@ cd .. ; sudo rm -rf 7zip/
 #### mirai
 
 ```shell
-mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl mkdir plugins ; cd plugins ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.5/bilibili-dynamic-mirai-plugin-1.0.5.mirai.jar ; cd .. ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
+mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl mkdir plugins ; cd plugins ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.6/bilibili-dynamic-mirai-plugin-1.0.6.mirai.jar ; cd .. ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
 ```
 
 #### Twitch Drop
@@ -228,11 +227,11 @@ crontab -e
 0 * * * * /bin/bash /home/user/twitch.sh
 ```
 
-#### Go语言支持的TLS密码套件清单：
+#### Go 语言支持的 TLS 密码套件清单：
 
 https://github.com/golang/go/blob/master/src/crypto/tls/cipher_suites.go
 
-#### debian源
+#### debian 源
 
 https://debgen.simplylinux.ch/
 
@@ -246,8 +245,7 @@ wget -q -O- https://packages.sury.org/php/apt.gpg | apt-key add -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 ```
 
-
-#### PHP探针
+#### PHP 探针
 
 ```shell
 sudo apt install -y php php-fpm
@@ -259,7 +257,8 @@ https://github.com/kmvan/x-prober
 wget https://github.com/kmvan/x-prober/raw/master/dist/prober.php
 ```
 
-nginx配置改动
+nginx 配置改动
+
 ```Nginx
 listen 127.0.0.1:31301 http2;
 location ~ \.php$ {
@@ -271,11 +270,13 @@ location ~ \.php$ {
 ```
 
 如果遇到
+
 ```shell
 connect() to unix:/var/run/php/php8.0-fpm.sock failed (13: Permission denied) while connecting to upstream
 ```
 
-就按以下步骤修改监听用户为nginx
+就按以下步骤修改监听用户为 nginx
+
 ```shell
 vim /etc/php/8.0/fpm/pool.d/www.conf
 
