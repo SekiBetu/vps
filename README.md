@@ -239,9 +239,12 @@ https://debgen.simplylinux.ch/
 
 ```shell
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
 wget https://nginx.org/keys/nginx_signing.key && apt-key add nginx_signing.key
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 wget -q -O- https://packages.sury.org/php/apt.gpg | apt-key add -
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key && rm winehq.key
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 ```
 
