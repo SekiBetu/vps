@@ -143,6 +143,10 @@ curl https://raw.githubusercontent.com/SekiBetu/Linux/main/init.sh | bash
 ```
 
 ```shell
+curl https://raw.githubusercontent.com/SekiBetu/Linux/main/init2.sh | bash
+```
+
+```shell
 curl https://raw.githubusercontent.com/SekiBetu/Linux/main/restart.sh | bash
 ```
 
