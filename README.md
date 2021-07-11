@@ -212,7 +212,11 @@ cd .. ; sudo rm -rf 7zip/
 #### mirai
 
 ```shell
-mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.5/mcl-1.0.5.zip ; unzip mcl-1.0.5.zip ; chmod +x mcl ; mkdir plugins ; cd plugins ; wget https://github.com/cssxsh/bilibili-helper/releases/download/v0.1.0-dev-6/bilibili-helper-0.1.0-dev-6.mirai.jar; cd .. ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/releases/download/1.0.6/bilibili-dynamic-mirai-plugin-1.0.6.mirai.jar ; mkdir DynamicPlugin ; cd DynamicPlugin ; mkdir font ; cd font ; wget https://github.com/Colter23/bilibili-dynamic-mirai-plugin/raw/master/DynamicPlugin/font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.ttf
+mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.1.0/mcl-1.1.0.zip ; unzip mcl-1.1.0.zip ; chmod +x mcl ; mkdir plugins ; cd plugins ; wget https://github.com/cssxsh/bilibili-helper/releases/download/v0.1.0-dev-6/bilibili-helper-0.1.0-dev-6.mirai.jar ; wget https://github.com/project-mirai/chat-command/releases/download/0.5.1/chat-command-0.5.1.jar
+```
+
+```shell
+/perm permit u123456 *:*
 ```
 
 #### Twitch Drop
