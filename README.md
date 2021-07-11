@@ -212,7 +212,7 @@ cd .. ; sudo rm -rf 7zip/
 #### mirai
 
 ```shell
-mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.1.0/mcl-1.1.0.zip ; unzip mcl-1.1.0.zip ; chmod +x mcl ; mkdir plugins ; cd plugins ; wget https://github.com/cssxsh/bilibili-helper/releases/download/v0.1.0-dev-6/bilibili-helper-0.1.0-dev-6.mirai.jar ; wget https://github.com/project-mirai/chat-command/releases/download/0.5.1/chat-command-0.5.1.jar
+mkdir mirai ; cd mirai ; wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.1.0/mcl-1.1.0.zip ; unzip mcl-1.1.0.zip ; chmod +x mcl ; mkdir plugins ; cd plugins ; wget https://github.com/cssxsh/bilibili-helper/releases/download/v0.1.0-dev-6/bilibili-helper-0.1.0-dev-6.mirai.jar ; wget https://github.com/project-mirai/chat-command/releases/download/0.5.1/chat-command-0.5.1.jar ; cd .. ; ./mcl
 ```
 
 ```shell
