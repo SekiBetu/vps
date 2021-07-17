@@ -93,7 +93,7 @@ wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trust
 ```
 
 ```shell
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y linux-xanmod-cacule
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y linux-xanmod-lts
 ```
 
 #### 卸载旧内核相关指令：
