@@ -16,5 +16,5 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y php php-fpm nginx
 echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
 wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y linux-xanmod-lts
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y linux-xanmod-cacule
 sudo apt autoremove -y
